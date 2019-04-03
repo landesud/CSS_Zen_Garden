@@ -1,0 +1,192 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+/**/
+/* basic elements */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: Lato, serif;
+  background-color: #2d2e30;
+  font-size: 1.2em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Indie Flower", cursive;
+  color:greenyellow;
+  text-align: center;
+  font-size: 1.5em; }
+
+p{
+    text-align: justify;
+    margin: 10px;
+}
+a{
+    display: inline-block;
+}
+a:link{
+  text-decoration: none;
+  color:yellow;
+}
+a:visited{
+    color:yellowgreen;
+}
+a:hover{
+    /*color:white;*/
+    animation: links 1s linear 0s infinite alternate;
+}
+a:active{
+    color:darkturquoise;
+}
+@keyframes links{
+    0%{
+        transform: rotateX(0deg);
+       color: yellow;
+    }
+    25%{
+        transform: rotateX(25deg);
+    }
+    50%{
+        transform: rotateX(0deg);
+        color: green;
+    }
+    75%{
+        transform: rotateX(-25deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+header{
+    width:30%;
+  /*background-color: rgba(250, 250, 250, 0.5);*/
+    min-height: 100px; 
+    
+}
+
+
+/*Layout*/
+div, header, footer, aside {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  /*box-shadow: 4px 3px 10px 1px rgba(100, 100, 100, 0.5); */
+}
+::selection{
+    background-color: cornsilk;
+}
+div:empty {
+  display: none; }
+
+#zen-intro {
+ /* background-color: #0072c6;*/
+  padding: 20px; 
+}
+
+
+
+/*
+#zen-summary {
+  background-color: rgba(150, 150, 150, 0.5); }
+
+#zen-preamble {
+  background-color: rgba(100, 100, 100, 0.5); }
+*/
+html{
+    background: black;
+}
+body{
+    color:white;
+    background: url(img/world.png) no-repeat bottom, url(img/sky_dark.png) no-repeat top;
+background-size: 100vw;
+}
+#zen-supporting {
+ padding: 20px; 
+ background: url(img/star_3.png) repeat center;
+background-size: 100vw;
+}
+
+/*
+#zen-explanation {
+  background-color: rgba(250, 250, 250, 0.5); }
+
+#zen-participation {
+  background-color: rgba(150, 150, 150, 0.5); }
+
+#zen-benefits {
+  background-color: rgba(100, 100, 100, 0.5); }
+
+#zen-requirements {
+  background-color: rgba(50, 50, 50, 0.5); }
+*/
+footer {
+ /* background-color: footer-color;*/
+  padding: 20px;
+  min-width: 100%; }
+
+aside {
+/*  background-color: #fc613f;*/
+  padding: 20px; }
+
+ul {
+  list-style: none; }
+
+/*RESPONSIVE*/
+aside > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+#design-selection {
+ /* background-color: rgba(250, 250, 250, 0.5);*/
+  min-width: 100%; }
+
+#design-archives {
+ /* background-color: rgba(150, 150, 150, 0.5); */
+  min-width: 45%; }
+
+#zen-resources {
+/*  background-color: rgba(100, 100, 100, 0.5); */
+  min-width: 45%; }
+
+#zen-supporting {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+#zen-supporting div {
+  padding: 5px; }
+
+@media only screen and (min-width: 1050px) {
+  #zen-supporting div {
+    min-width: 150px;
+    max-width: 550px; } }
+@media only screen and (max-width: 1049px) and (min-width: 641px) {
+  #zen-supporting div {
+    min-width: 250px;
+    max-width: 500px; } }
+@media only screen and (max-width: 640px) {
+  #zen-supporting div {
+    min-width: 250px;
+    max-width: 500px; }
+
+  #design-archives {
+    background-color: rgba(150, 150, 150, 0.5);
+    min-width: 100%; }
+
+  #zen-resources {
+    background-color: rgba(100, 100, 100, 0.5);
+    min-width: 100%; } 
+header{
+    width:70%;
+}
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -104,13 +104,13 @@ html{
 }
 body{
     color:white;
-    background: url(img/world.png) no-repeat bottom, url(img/sky_dark.png) no-repeat top;
+    background: url(img/world.png) no-repeat bottom, url(img/sky_dark.png) no-repeat top, url(img/star_3.png) repeat center;
 background-size: 100vw;
 }
 #zen-supporting {
  padding: 20px; 
- background: url(img/star_3.png) repeat center;
-background-size: 100vw;
+ /*background: url(img/star_3.png) repeat center;
+background-size: 100vw;*/
 }
 
 /*

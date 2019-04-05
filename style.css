@@ -27,11 +27,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Indie Flower", cursive;
   color:greenyellow;
   text-align: center;
-  font-size: 1.5em; }
+  font-size: 1.5em; 
+}
 
 p{
     text-align: justify;
     margin: 10px;
+    text-indent: 10px;
 }
 a{
     display: inline-block;
@@ -69,11 +71,21 @@ a:active{
         transform: rotateX(0deg);
     }
 }
-header{
-    width:30%;
-  /*background-color: rgba(250, 250, 250, 0.5);*/
-    min-height: 100px; 
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;   
+  z-index: -1;
+  background: url(img/sky_dark.png);
+  background-size: 100vw;
+  animation: header 3s ease 0s infinite alternate;
     
+  /*background-color: rgba(250, 250, 250, 0.5);*/
+    
+   
 }
 
 
@@ -111,21 +123,29 @@ body{
     color:white;
     animation: starsmove 250s linear 0s infinite alternate;
 }
+
 #zen-supporting {
  padding: 20px; 
-
  /*background: url(img/star_3.png) repeat center;
 background-size: 100vw;*/
 }
 
+@keyframes header{
+    from {
+    opacity: .6;
+    }
+    to{
+    opacity: .2;
+    }
+}
    
 @keyframes starsmove{
     from{
-        background: url(img/world.png) no-repeat bottom, url(img/sky_dark.png) no-repeat top, url(img/star_3.png) repeat top;
+        background: url(img/world.png) no-repeat bottom, url(img/star_3.png) repeat top;
         background-size: 100vw;
     }
     to{
-        background: url(img/world.png) no-repeat bottom, url(img/sky_dark.png) no-repeat top, url(img/star_3.png) repeat bottom;
+        background: url(img/world.png) no-repeat bottom, url(img/star_3.png) repeat bottom;
         background-size: 100vw;
     }
 }
@@ -143,6 +163,24 @@ background-size: 100vw;*/
 #zen-requirements {
   background-color: rgba(50, 50, 50, 0.5); }
 */
+
+@keyframes wiggle {
+25% {
+transform: scale(.5) skewX(-5deg) rotate(-5deg);
+}
+50% {
+transform: skewY(5deg) rotate(5deg);
+}
+75% {
+transform: skewX(-5deg) rotate(-5deg) scale(1.5);
+}
+100% {
+transform: scale(1.5);
+}
+}
+#design-selection > h3::before{
+    content: url(img/world.png) no-repeat bottom;
+}
 footer {
  /* background-color: footer-color;*/
   padding: 20px;

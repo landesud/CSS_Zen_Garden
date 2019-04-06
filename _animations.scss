@@ -1,0 +1,53 @@
+@keyframes links{
+    0%{
+        transform: rotateX(0deg);
+       color: yellow;
+    }
+    25%{
+        transform: rotateX(25deg);
+    }
+    50%{
+        transform: rotateX(0deg);
+        color: green;
+    }
+    75%{
+        transform: rotateX(-25deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes header{
+    from {
+    opacity: 1;
+    }
+    to{
+    opacity: .2;
+    }
+}
+   
+@keyframes starsmove{
+    from{
+        background: url(img/world.png) no-repeat bottom, url(img/star_3.png) repeat top;
+        background-size: 100vw;
+    }
+    to{
+        background: url(img/world.png) no-repeat bottom, url(img/star_3.png) repeat bottom;
+        background-size: 100vw;
+    }
+}
+@keyframes wiggle {
+25% {
+transform: scale(.5) skewX(1deg) rotate(1deg);
+}
+50% {
+transform: skewY(1deg) rotate(1deg);
+}
+75% {
+transform: skewX(1deg) rotate(1deg) scale(.9);
+}
+100% {
+transform: scale(.5);
+}
+}

@@ -146,6 +146,7 @@ html{
 }
 body{
     color:white;
+    background: url(img/world.png) no-repeat bottom;
     animation: starsmove 250s linear 0s infinite alternate;
 }
 
@@ -204,7 +205,7 @@ transform: scale(.5);
 }
 }
 #design-selection > h3::before{
-    content: url(img/world.png) no-repeat bottom;
+    
 }
 footer {
  /* background-color: footer-color;*/
